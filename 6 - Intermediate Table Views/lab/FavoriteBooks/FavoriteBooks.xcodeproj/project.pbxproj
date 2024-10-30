@@ -16,6 +16,7 @@
 		188F678223AC0292007E2064 /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F678123AC0292007E2064 /* BookTableViewController.swift */; };
 		188F678423AC0394007E2064 /* BookFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F678323AC0394007E2064 /* BookFormViewController.swift */; };
 		638585402CCFE3DB0047B793 /* BookFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6385853F2CCFE3DB0047B793 /* BookFormTableViewController.swift */; };
+		63A2457E2CD2F39000B51C9B /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A2457D2CD2F39000B51C9B /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		188F678123AC0292007E2064 /* BookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		188F678323AC0394007E2064 /* BookFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFormViewController.swift; sourceTree = "<group>"; };
 		6385853F2CCFE3DB0047B793 /* BookFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFormTableViewController.swift; sourceTree = "<group>"; };
+		63A2457D2CD2F39000B51C9B /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				188F677423AC01B1007E2064 /* LaunchScreen.storyboard */,
 				188F676F23AC01B0007E2064 /* Main.storyboard */,
 				6385853F2CCFE3DB0047B793 /* BookFormTableViewController.swift */,
+				63A2457D2CD2F39000B51C9B /* BookTableViewCell.swift */,
 			);
 			path = FavoriteBooks;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				638585402CCFE3DB0047B793 /* BookFormTableViewController.swift in Sources */,
 				188F678023AC025B007E2064 /* Book.swift in Sources */,
 				188F676A23AC01B0007E2064 /* AppDelegate.swift in Sources */,
+				63A2457E2CD2F39000B51C9B /* BookTableViewCell.swift in Sources */,
 				188F678223AC0292007E2064 /* BookTableViewController.swift in Sources */,
 				188F678423AC0394007E2064 /* BookFormViewController.swift in Sources */,
 				188F676C23AC01B0007E2064 /* SceneDelegate.swift in Sources */,
