@@ -94,7 +94,6 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GGi-Pv-sON"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uJt-Sg-fLy" firstAttribute="leading" secondItem="GGi-Pv-sON" secondAttribute="leading" id="52I-Vd-NDT"/>
                             <constraint firstItem="mtL-gk-scV" firstAttribute="leading" secondItem="GGi-Pv-sON" secondAttribute="leading" constant="20" id="6CN-w8-JKM"/>
