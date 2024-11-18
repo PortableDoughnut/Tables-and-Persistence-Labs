@@ -13,6 +13,8 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     @IBOutlet var saveBarButtonItem: UIBarButtonItem!
 	@IBOutlet weak var birthdayDatePicker: UIDatePicker!
 	
+	var employeeType: EmployeeType?
+	
     weak var delegate: EmployeeDetailTableViewControllerDelegate?
     var employee: Employee?
 	
@@ -61,8 +63,12 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     private func updateSaveButtonState() {
-        let shouldEnableSaveButton = nameTextField.text?.isEmpty == false
+		let shouldEnableSaveButton = nameTextField.text?.isEmpty == false &&
+		employeeTypeLabel.textColor == .systemBlue
+		
         saveBarButtonItem.isEnabled = shouldEnableSaveButton
+		
+		
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -86,5 +92,20 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     @IBAction func nameTextFieldDidChange(_ sender: UITextField) {
         updateSaveButtonState()
     }
+	
+	@IBSegueAction func showEmployeeType(_ coder: NSCoder, sender: Any?) -> EmployeeTypeTableViewController? {
+		let employeeTypeTableViewController = EmployeeTypeTableViewController(coder: coder)
+		employeeTypeTableViewController!.delegate = self
+		return employeeTypeTableViewController
+	}
+	
 
+}
+
+extension EmployeeDetailTableViewController: EmployeeTypeTableViewControllerDelegate {
+	func employeeTypeTableViewController(_ controller: EmployeeTypeTableViewController, didSelect employeeType: EmployeeType) {
+		self.employeeType = employeeType
+		self.employeeTypeLabel.text = self.employeeType?.description
+		self.employeeTypeLabel.textColor = .systemBlue
+	}
 }

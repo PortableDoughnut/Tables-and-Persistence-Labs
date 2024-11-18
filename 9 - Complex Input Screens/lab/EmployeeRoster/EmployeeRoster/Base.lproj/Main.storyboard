@@ -209,7 +209,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="A58-dF-76c" kind="show" id="FvZ-63-nMC"/>
+                                            <segue destination="A58-dF-76c" kind="show" destinationCreationSelector="showEmployeeType:sender:" id="FvZ-63-nMC"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -323,7 +323,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HfC-1c-cmZ"/>
+        <segue reference="fI6-Dc-E20"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12549019607843137" green="0.64313725490196072" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
     <resources>

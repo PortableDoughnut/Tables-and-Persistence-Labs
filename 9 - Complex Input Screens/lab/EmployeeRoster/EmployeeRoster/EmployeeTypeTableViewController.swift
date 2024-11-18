@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol EmployeeTypeTableViewControllerDelegate: AnyObject {
+	func employeeTypeTableViewController(_ controller: EmployeeTypeTableViewController, didSelect employeeType: EmployeeType)
+}
+
 class EmployeeTypeTableViewController: UITableViewController {
+
+	var delegate: EmployeeTypeTableViewControllerDelegate?
 	
 	var employeeType: EmployeeType? {
 		didSet {
@@ -49,7 +55,10 @@ class EmployeeTypeTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		employeeType = EmployeeType.allCases[indexPath.row]
+		
+		delegate?.employeeTypeTableViewController(self, didSelect: employeeType!)
 	}
+	
 
     /*
     // MARK: - Navigation
