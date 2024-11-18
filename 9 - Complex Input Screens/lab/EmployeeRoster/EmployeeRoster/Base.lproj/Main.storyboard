@@ -141,12 +141,45 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="mTy-fq-5WR">
+                                        <rect key="frame" x="0.0" y="106" width="390" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mTy-fq-5WR" id="cfA-e6-J08">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9nl-HI-P6i">
+                                                    <rect key="frame" x="4" y="0.0" width="386" height="40"/>
+                                                    <subviews>
+                                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="fy2-C1-SFf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="386" height="40"/>
+                                                            <connections>
+                                                                <action selector="datePickerValueChanged:" destination="sKr-bE-vCi" eventType="valueChanged" id="3FK-gf-o9m"/>
+                                                            </connections>
+                                                        </datePicker>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="fy2-C1-SFf" firstAttribute="leading" secondItem="9nl-HI-P6i" secondAttribute="leading" id="Ebz-Gg-ffu"/>
+                                                        <constraint firstItem="fy2-C1-SFf" firstAttribute="top" secondItem="9nl-HI-P6i" secondAttribute="top" id="Of3-yk-Yte"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fy2-C1-SFf" secondAttribute="trailing" id="alS-4T-3A9"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fy2-C1-SFf" secondAttribute="bottom" id="azu-WU-FDF"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9nl-HI-P6i" secondAttribute="trailing" id="Cg8-gx-nzO"/>
+                                                <constraint firstItem="9nl-HI-P6i" firstAttribute="top" secondItem="cfA-e6-J08" secondAttribute="top" id="HaE-8I-hiy"/>
+                                                <constraint firstAttribute="bottom" secondItem="9nl-HI-P6i" secondAttribute="bottom" constant="4" id="ToD-SX-VdC"/>
+                                                <constraint firstItem="9nl-HI-P6i" firstAttribute="leading" secondItem="cfA-e6-J08" secondAttribute="leading" constant="4" id="ZZv-F7-mHP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="Erp-zR-5Yv">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="tQD-Cn-6GM">
-                                        <rect key="frame" x="0.0" y="142" width="390" height="44"/>
+                                        <rect key="frame" x="0.0" y="186.00000000000003" width="390" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tQD-Cn-6GM" id="tTa-b3-ga2">
                                             <rect key="frame" x="0.0" y="0.0" width="359.66666666666669" height="44"/>
@@ -197,6 +230,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="birthdayDatePicker" destination="fy2-C1-SFf" id="ZLE-TK-Vkd"/>
                         <outlet property="dobLabel" destination="sb2-1b-Gac" id="94j-1d-oBq"/>
                         <outlet property="employeeTypeLabel" destination="iHP-Fp-n5s" id="VQw-h7-IY8"/>
                         <outlet property="nameTextField" destination="G1W-fA-Vfi" id="OxN-ZJ-COx"/>

@@ -11,9 +11,17 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     @IBOutlet var dobLabel: UILabel!
     @IBOutlet var employeeTypeLabel: UILabel!
     @IBOutlet var saveBarButtonItem: UIBarButtonItem!
-    
+	@IBOutlet weak var birthdayDatePicker: UIDatePicker!
+	
     weak var delegate: EmployeeDetailTableViewControllerDelegate?
     var employee: Employee?
+	
+	var isEditingBirthday: Bool = false {
+		didSet {
+			tableView.beginUpdates()
+			tableView.endUpdates()
+		}
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,22 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         updateView()
         updateSaveButtonState()
     }
+	
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		if indexPath == IndexPath(indexes: [0, 2]) && !isEditingBirthday {
+			return 0
+		} else {
+			return UITableView.automaticDimension
+		}
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		
+		if indexPath == IndexPath(indexes: [0, 1]) {
+			isEditingBirthday.toggle()
+		}
+	}
     
     func updateView() {
         if let employee = employee {
@@ -46,14 +70,19 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
             return
         }
         
-        let employee = Employee(name: name, dateOfBirth: Date(), employeeType: .exempt)
+		let employee = Employee(name: name, dateOfBirth: birthdayDatePicker.date, employeeType: .exempt)
         delegate?.employeeDetailTableViewController(self, didSave: employee)
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         employee = nil
     }
-
+	
+	@IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+		dobLabel.text = sender.date.formatted(date: .abbreviated, time: .omitted)
+		dobLabel.textColor = .label
+	}
+	
     @IBAction func nameTextFieldDidChange(_ sender: UITextField) {
         updateSaveButtonState()
     }
