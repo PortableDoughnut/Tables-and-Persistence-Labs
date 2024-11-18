@@ -76,7 +76,7 @@
                                     <outlet property="genreLabel" destination="8Mm-Ja-06H" id="Sz3-uC-gZD"/>
                                     <outlet property="lengthLabel" destination="w4u-bD-9zu" id="hpI-zq-lMo"/>
                                     <outlet property="titleLabel" destination="u7W-cc-aE6" id="V3d-Rg-O7T"/>
-                                    <segue destination="Xzw-66-96C" kind="show" identifier="" id="0j1-Bs-GYw"/>
+                                    <segue destination="Xzw-66-96C" kind="show" identifier="EditBookSegue" id="0j1-Bs-GYw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,7 +88,7 @@
                     <navigationItem key="navigationItem" title="Favorite Books" id="f0d-F9-JRK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gLf-vC-9w7">
                             <connections>
-                                <segue destination="Xzw-66-96C" kind="show" identifier="" id="xwL-2P-MeA"/>
+                                <segue destination="Xzw-66-96C" kind="show" identifier="AddBookSegue" id="xwL-2P-MeA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -233,14 +233,14 @@
                             <tableViewSection id="cnJ-dF-X4Q">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gg0-LJ-itT">
-                                        <rect key="frame" x="0.0" y="396.66665840148926" width="390" height="35"/>
+                                        <rect key="frame" x="0.0" y="396.66665840148926" width="390" height="35.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gg0-LJ-itT" id="Wl0-un-8id">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="35.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZM-im-uqY">
-                                                    <rect key="frame" x="20" y="0.0" width="350" height="35"/>
+                                                    <rect key="frame" x="20" y="0.0" width="350" height="35.333333333333336"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                                     <connections>
@@ -284,7 +284,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xwL-2P-MeA"/>
+        <segue reference="0j1-Bs-GYw"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.85098039215686272" green="0.61568627450980395" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

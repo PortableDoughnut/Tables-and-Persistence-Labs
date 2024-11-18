@@ -10,6 +10,8 @@ import UIKit
 class BookFormTableViewController: UITableViewController {
 	
 	var book: Book?
+	var isEditingBook: Bool = false
+	var toReturnIndexPath: IndexPath?
 	
 	@IBOutlet var titleTextField: UITextField!
 	@IBOutlet var authorTextField: UITextField!
@@ -29,6 +31,19 @@ class BookFormTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		switch isEditingBook {
+		case true:
+			title = "Edit Book"
+			
+			titleTextField.text = book?.title
+			authorTextField.text = book?.author
+			genreTextField.text = book?.genre
+			lengthTextField.text = book?.length
+		case false:
+			title = "Add Book"
+		}
+		
+		print(isEditingBook)
 		updateView()
 	}
 	

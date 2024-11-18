@@ -31,5 +31,4 @@ class BookTableViewCell: UITableViewCell {
 		genreLabel.text = book.genre
 		lengthLabel.text = "\(book.length.description) pages"
 	}
-
 }
