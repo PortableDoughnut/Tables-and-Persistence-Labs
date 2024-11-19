@@ -63,8 +63,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     private func updateSaveButtonState() {
-		let shouldEnableSaveButton = nameTextField.text?.isEmpty == false &&
-		employeeTypeLabel.textColor == .systemBlue
+		let shouldEnableSaveButton = nameTextField.text?.isEmpty == false
 		
         saveBarButtonItem.isEnabled = shouldEnableSaveButton
 		
