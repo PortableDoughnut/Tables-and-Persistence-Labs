@@ -31,4 +31,33 @@ class AthleteTableViewController: UITableViewController {
         
         return cell
     }
+	
+	@IBSegueAction func addAthlete(_ coder: NSCoder, sender: Any?) -> AthleteFormViewController? {
+		guard let athleteForm: AthleteFormViewController = .init(coder: coder, athlete: nil)
+		else { return nil }
+		
+		return athleteForm
+	}
+	
+	@IBSegueAction func editAthlete(_ coder: NSCoder, sender: Any?) -> AthleteFormViewController? {
+		guard let senderCell = sender as? UITableViewCell,
+			  let indexPath = tableView.indexPath(for: senderCell),
+			  let athleteForm: AthleteFormViewController = .init(coder: coder, athlete: athletes[indexPath.row])
+		else { return nil }
+		
+		return athleteForm
+	}
+	
+	@IBAction func unwindToHome(_ segue: UIStoryboardSegue) {
+		guard let sourceViewController = segue.source as? AthleteFormViewController else { return }
+		
+		if let indexPath = tableView.indexPathForSelectedRow {
+			athletes[indexPath.row] = sourceViewController.athlete!
+			tableView.reloadRows(at: [indexPath], with: .none)
+		} else {
+			athletes.append(sourceViewController.athlete!)
+			tableView.reloadData()
+		}
+	}
+	
 }

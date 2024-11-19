@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" id="lBM-ky-b8A"/>
+                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" destinationCreationSelector="editAthlete:sender:" id="lBM-ky-b8A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="My Favorite Athletes" id="HkE-HG-Ylf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sEp-s4-2KD">
                             <connections>
-                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" id="wJO-3P-Bh6"/>
+                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" destinationCreationSelector="addAthlete:sender:" id="wJO-3P-Bh6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,6 +125,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onSaveButtonPressed:" destination="Jdx-qb-Jda" eventType="touchUpInside" id="OhJ-jT-jl1"/>
+                                    <segue destination="M5F-zu-Q0C" kind="unwind" unwindAction="unwindToHome:" id="Ikj-9B-Aog"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +150,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRJ-p2-DTp" sceneMemberID="firstResponder"/>
+                <exit id="M5F-zu-Q0C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1860" y="139"/>
         </scene>
