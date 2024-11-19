@@ -13,6 +13,7 @@
 		1830B16F23A3064300FF29B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830B16E23A3064300FF29B5 /* Assets.xcassets */; };
 		1830B17223A3064300FF29B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830B17023A3064300FF29B5 /* LaunchScreen.storyboard */; };
 		1830B17A23A3067E00FF29B5 /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830B17923A3067E00FF29B5 /* AthleteTableViewController.swift */; };
+		639DD5332CECE13200AF3482 /* Outline.md in Resources */ = {isa = PBXBuildFile; fileRef = 639DD5322CECE13200AF3482 /* Outline.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1830B17123A3064300FF29B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1830B17323A3064300FF29B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1830B17923A3067E00FF29B5 /* AthleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
+		639DD5322CECE13200AF3482 /* Outline.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Outline.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1830B16E23A3064300FF29B5 /* Assets.xcassets */,
 				1830B17023A3064300FF29B5 /* LaunchScreen.storyboard */,
 				1830B17323A3064300FF29B5 /* Info.plist */,
+				639DD5322CECE13200AF3482 /* Outline.md */,
 			);
 			path = FavoriteAthlete;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1830B17223A3064300FF29B5 /* LaunchScreen.storyboard in Resources */,
+				639DD5332CECE13200AF3482 /* Outline.md in Resources */,
 				1830B16F23A3064300FF29B5 /* Assets.xcassets in Resources */,
 				1830B16D23A3064200FF29B5 /* Main.storyboard in Resources */,
 			);
